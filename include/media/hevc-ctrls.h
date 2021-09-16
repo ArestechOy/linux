@@ -173,10 +173,6 @@ struct v4l2_ctrl_hevc_slice_params {
 	__u32	bit_size;
 	__u32	data_bit_offset;
 
-	/* ISO/IEC 23008-2, ITU-T Rec. H.265: General slice segment header */
-	__u32	slice_segment_addr;
-	__u32	num_entry_point_offsets;
-
 	/* ISO/IEC 23008-2, ITU-T Rec. H.265: NAL unit header */
 	__u8	nal_unit_type;
 	__u8	nuh_temporal_id_plus1;
@@ -208,6 +204,7 @@ struct v4l2_ctrl_hevc_slice_params {
 
 	__u8	padding;
 
+	__u32	num_entry_point_offsets;
 	__u32	entry_point_offset_minus1[256];
 
 	/* ISO/IEC 23008-2, ITU-T Rec. H.265: Weighted prediction parameter */
